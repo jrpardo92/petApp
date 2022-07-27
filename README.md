@@ -1,10 +1,10 @@
 # pet_app
 
-A new Flutter project.
+Aplicacion para registro y busqueda de mascotas 
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Este proyecto esta desarrollado en Flutter y Firebase, proyecto academico para la UTPL con tutoria del Ing. Patricio Abad.
 
 A few resources to get you started if this is your first Flutter project:
 

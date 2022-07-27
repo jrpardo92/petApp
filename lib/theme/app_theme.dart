@@ -12,4 +12,8 @@ class AppTheme {
       elevation: 0,
     ),
   );
+  // configuracion de stylo de titulos
+  static const textoPrincipal = TextStyle(
+    fontSize: 16,
+  );
 }

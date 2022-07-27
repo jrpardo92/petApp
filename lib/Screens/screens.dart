@@ -7,4 +7,5 @@ export 'package:pet_app/Screens/pets_screen.dart';
 export 'package:pet_app/Screens/petSeachInfo_screen.dart';
 export 'package:pet_app/Screens/recomendations_screen.dart';
 export 'package:pet_app/Screens/searchPet_screen.dart';
+export 'package:pet_app/Screens/settings_screen.dart';
 export 'package:pet_app/Screens/userRegister_screen.dart';

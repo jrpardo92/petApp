@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pet_app/Screens/settings_screen.dart';
+import 'package:pet_app/router/app_routes.dart';
 import 'Screens/screens.dart';
 
 void main() => runApp(MyApp());
@@ -10,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Material App',
-      initialRoute: 'home',
+      initialRoute: AppRouter.initiaRoute,
       routes: {
         'home': (context) => const HomeScreen(),
         'alerts': (context) => const AlertsScreen(),

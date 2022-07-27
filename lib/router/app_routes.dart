@@ -4,7 +4,7 @@ import '../Screens/screens.dart';
 
 class AppRouter {
   // Definir ruta inicial
-  static const initiaRoute = 'home';
+  static const initialRoute = 'home';
 
 // Definir mapa de rutas
   static Map<String, Widget Function(BuildContext)> routes = {

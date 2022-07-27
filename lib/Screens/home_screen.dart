@@ -5,12 +5,8 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: definicion color principal de la app
-    const colorPrincipal = Color(0xffFFAF36);
     return Scaffold(
       appBar: AppBar(
-        elevation: 0,
-        backgroundColor: colorPrincipal,
         title: const Text('Inicio'),
         actions: const [
           Padding(

@@ -22,7 +22,6 @@ class MyApp extends StatelessWidget {
         'recomendations': (context) => const RecomendationsScreen(),
         'searchPet': (context) => const SearchPetScreen(),
         'settings': (context) => const SettingsScreen(),
-        'splash': (context) => const SplashScreen(),
         'userRegister': (context) => const UserRegisterScreen(),
       },
     );

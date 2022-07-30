@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../theme/app_theme.dart';
+import '../widgets/cardPet1.dart';
 
 class PetSearchInfoScreen extends StatelessWidget {
   const PetSearchInfoScreen({Key? key}) : super(key: key);
@@ -9,9 +8,9 @@ class PetSearchInfoScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Informacion de mascota"),
+        title: const Text("Informacion de mascota"),
         elevation: 0,
-        actions: [
+        actions: const [
           Padding(
             padding: EdgeInsets.only(right: 20),
             child: Icon(Icons.pets),
@@ -25,17 +24,22 @@ class PetSearchInfoScreen extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Card(
-                  child: Image(
-                    width: 500,
-                    image: AssetImage('assets/images/Logo_principal_texto.png'),
-                  ),
+                Text(
+                  'ID:',
+                  style: TextStyle(
+                      color: Colors.amber[700], fontWeight: FontWeight.bold),
                 ),
-                SizedBox(height: 20),
+                const Text(
+                  '001',
+                  style: TextStyle(fontSize: 18),
+                ),
+                const SizedBox(height: 10),
+                const CardPet1(),
+                const SizedBox(height: 20),
                 _infoMascota(),
-                SizedBox(height: 10),
-                Divider(),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
+                const Divider(),
+                const SizedBox(height: 10),
                 _infoPropietario()
               ],
             ),
@@ -50,45 +54,45 @@ _infoMascota() {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
-      Text(
+      const Text(
         'Informacion de Mascota',
         style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
       ),
-      SizedBox(height: 10),
+      const SizedBox(height: 10),
       Text(
-        'Nombre:',
+        'NOMBRE:',
         style: TextStyle(color: Colors.amber[700], fontWeight: FontWeight.bold),
       ),
-      Text(
+      const Text(
         'MAX',
         style: TextStyle(fontSize: 18),
       ),
-      SizedBox(height: 10),
+      const SizedBox(height: 10),
       Text(
-        'Raza',
+        'RAZA',
         style: TextStyle(color: Colors.amber[700], fontWeight: FontWeight.bold),
       ),
-      Text(
+      const Text(
         'Golden Retriver',
         style: TextStyle(
           fontSize: 18,
         ),
       ),
-      SizedBox(height: 10),
+      const SizedBox(height: 10),
       Text(
-        'Edad',
+        'EDAD',
         style: TextStyle(color: Colors.amber[700], fontWeight: FontWeight.bold),
       ),
-      Text(
+      const Text(
         '2 años',
         style: TextStyle(fontSize: 18),
       ),
-      SizedBox(height: 10),
+      const SizedBox(height: 10),
       Text(
-        'Descripcion',
+        'DESCRIPCION',
         style: TextStyle(color: Colors.amber[700], fontWeight: FontWeight.bold),
       ),
-      Text(
+      const Text(
         'Alegre y energico, no es agresivo',
         style: TextStyle(fontSize: 20),
       ),
@@ -100,49 +104,58 @@ _infoPropietario() {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
-      Text(
+      const Text(
         'Informacion de propietario',
         style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
       ),
-      SizedBox(height: 10),
+      const SizedBox(height: 10),
       Text(
-        'Nombre:',
+        'NOMBRE:',
         style: TextStyle(color: Colors.amber[700], fontWeight: FontWeight.bold),
       ),
-      Text(
+      const Text(
         'Kelvin J. Pardo',
         style: TextStyle(fontSize: 18),
       ),
-      SizedBox(height: 10),
+      const SizedBox(height: 10),
       Text(
-        'Contacto',
+        'CONTACTO',
         style: TextStyle(color: Colors.amber[700], fontWeight: FontWeight.bold),
       ),
-      Text(
-        '0988222445',
-        style: TextStyle(
-          fontSize: 18,
-        ),
+      Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: const [
+          Text(
+            '0988222445',
+            style: TextStyle(
+              fontSize: 18,
+            ),
+          ),
+          SizedBox(width: 200),
+          Icon(
+            Icons.copy,
+          )
+        ],
       ),
-      SizedBox(height: 10),
+      const SizedBox(height: 10),
       Text(
-        'Ciudad',
+        'CIUDAD',
         style: TextStyle(color: Colors.amber[700], fontWeight: FontWeight.bold),
       ),
-      Text(
+      const Text(
         'Loja',
         style: TextStyle(fontSize: 18),
       ),
-      SizedBox(height: 10),
+      const SizedBox(height: 10),
       Text(
         'Pais',
         style: TextStyle(color: Colors.amber[700], fontWeight: FontWeight.bold),
       ),
-      Text(
+      const Text(
         'Ecuador',
         style: TextStyle(fontSize: 20),
       ),
-      SizedBox(height: 30),
+      const SizedBox(height: 30),
     ],
   );
 }

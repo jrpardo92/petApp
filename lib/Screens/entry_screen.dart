@@ -14,28 +14,27 @@ class EntryScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image(
+              const Image(
                 image: AssetImage('assets/images/Logo_principal_texto.png'),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              Text(
+              const Text(
                 'Es hora de tener mas seguridad para tu mascota',
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
                 textAlign: TextAlign.center,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 100,
               ),
-              Text(
+              const Text(
                 'Puedes realizar la busqueda de una mascota',
                 style: AppTheme.textoPrincipal,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-              // TODO: boton de buscar2
               MaterialButton(
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10)),
@@ -43,8 +42,8 @@ class EntryScreen extends StatelessWidget {
                   elevation: 0,
                   color: AppTheme.colorSecundary,
                   child: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 135),
-                    child: Text(
+                    padding: const EdgeInsets.symmetric(horizontal: 135),
+                    child: const Text(
                       'Buscar',
                       style: TextStyle(color: Colors.white),
                     ),
@@ -52,21 +51,21 @@ class EntryScreen extends StatelessWidget {
                   onPressed: () {
                     Navigator.pushNamed(context, 'searchPet');
                   }),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-              Text(
+              const Text(
                 'o',
                 style: AppTheme.textoPrincipal,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-              Text(
+              const Text(
                 'Continuar para iniciar sesion',
                 style: AppTheme.textoPrincipal,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               MaterialButton(
@@ -75,7 +74,7 @@ class EntryScreen extends StatelessWidget {
                   disabledColor: Colors.grey,
                   elevation: 0,
                   color: AppTheme.primary,
-                  child: Container(
+                  child: const SizedBox(
                     width: 350,
                     // padding: EdgeInsets.symmetric(horizontal: 135),
                     child: Text(

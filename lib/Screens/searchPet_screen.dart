@@ -10,9 +10,9 @@ class SearchPetScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Busqueda"),
+        title: const Text("Busqueda"),
         elevation: 0,
-        actions: [
+        actions: const [
           Padding(
             padding: EdgeInsets.only(right: 20),
             child: Icon(Icons.pets),
@@ -23,12 +23,12 @@ class SearchPetScreen extends StatelessWidget {
         padding: const EdgeInsets.all(20.0),
         child: Column(
           children: [
-            Text(
+            const Text(
               'Buscar una mascota',
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
               textAlign: TextAlign.start,
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             // Identificacion
             TextFormField(
               autocorrect: false,
@@ -38,7 +38,7 @@ class SearchPetScreen extends StatelessWidget {
                   labelTextO: 'ID',
                   prefixIcon: Icons.numbers),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             // Nombre de usuario
             TextFormField(
               autocorrect: false,
@@ -48,7 +48,7 @@ class SearchPetScreen extends StatelessWidget {
                   labelTextO: 'Nombre de usuario',
                   prefixIcon: Icons.person),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             // Telefono
             TextFormField(
               autocorrect: false,
@@ -58,7 +58,7 @@ class SearchPetScreen extends StatelessWidget {
                   labelTextO: 'Telefono',
                   prefixIcon: Icons.numbers),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             // Identificacion
             TextFormField(
               autocorrect: false,
@@ -68,23 +68,21 @@ class SearchPetScreen extends StatelessWidget {
                   labelTextO: 'Mensaje',
                   prefixIcon: Icons.numbers),
             ),
-            SizedBox(height: 280),
+            const SizedBox(height: 280),
             MaterialButton(
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10)),
                 disabledColor: Colors.grey,
                 elevation: 0,
                 color: AppTheme.colorSecundary,
-                child: Container(
+                child: const SizedBox(
                   width: 350,
-                  // padding: EdgeInsets.symmetric(horizontal: 150),
                   child: Text(
                     'Buscar',
                     style: TextStyle(color: Colors.white),
                     textAlign: TextAlign.center,
                   ),
                 ),
-                // TODO: boton de ingresar
                 onPressed: () {
                   Navigator.pushNamed(context, 'petSearchInfo');
                 })

@@ -9,3 +9,4 @@ export 'package:pet_app/Screens/recomendations_screen.dart';
 export 'package:pet_app/Screens/searchPet_screen.dart';
 export 'package:pet_app/Screens/settings_screen.dart';
 export 'package:pet_app/Screens/userRegister_screen.dart';
+export 'package:pet_app/Screens/botton_navigation_screen.dart';

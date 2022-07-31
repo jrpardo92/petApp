@@ -19,5 +19,6 @@ class AppRouter {
     'searchPet': (context) => const SearchPetScreen(),
     'settings': (context) => const SettingsScreen(),
     'userRegister': (context) => const UserRegisterScreen(),
+    'btn_navigation': (context) => const Btn_Navigation_Screen(),
   };
 }

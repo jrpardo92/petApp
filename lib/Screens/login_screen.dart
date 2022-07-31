@@ -93,7 +93,7 @@ class _loginForm extends StatelessWidget {
                 ),
                 // TODO: boton de ingresar
                 onPressed: () {
-                  Navigator.pushNamed(context, 'home');
+                  Navigator.pushNamed(context, 'btn_navigation');
                 })
           ],
         ),

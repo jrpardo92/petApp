@@ -1,8 +1,12 @@
 // ignore_for_file: camel_case_types
 
 import 'package:flutter/material.dart';
+import 'package:pet_app/Screens/screens.dart';
+import 'package:provider/provider.dart';
 
+import '../providers/ui_provider.dart';
 import '../theme/app_theme.dart';
+import '../widgets/custom_navigatorbar.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -174,7 +178,7 @@ class _cardpet2 extends StatelessWidget {
                   padding:
                       const EdgeInsets.symmetric(horizontal: 8.0, vertical: 5),
                   child: Text(
-                    'Golden Retriever',
+                    'Samoyedo',
                     style: TextStyle(
                         color: Colors.amber[700], fontWeight: FontWeight.w600),
                   ),

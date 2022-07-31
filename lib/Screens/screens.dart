@@ -13,3 +13,4 @@ export 'package:pet_app/Screens/botton_navigation_screen.dart';
 export 'package:pet_app/Screens/pet1_screen.dart';
 export 'package:pet_app/Screens/pet2_screen.dart';
 export 'package:pet_app/Screens/pet3_screen.dart';
+export 'package:pet_app/Screens/pet1_screen_found.dart';

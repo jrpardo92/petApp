@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import '../theme/app_theme.dart';
 import '../widgets/cardPet1.dart';
 
-class Pet1Screen extends StatelessWidget {
-  const Pet1Screen({Key? key}) : super(key: key);
+class Pet1ScreenFound extends StatelessWidget {
+  const Pet1ScreenFound({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -61,11 +61,11 @@ class _btn_desarparicion extends StatelessWidget {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         disabledColor: Colors.grey,
         elevation: 0,
-        color: AppTheme.colorSecundary,
+        color: Colors.green[600],
         child: const SizedBox(
           width: 350,
           child: Text(
-            'Reportar desaparicion',
+            'Cancelar desaparicion',
             style: TextStyle(color: Colors.white),
             textAlign: TextAlign.center,
           ),
@@ -79,7 +79,7 @@ class _btn_desarparicion extends StatelessWidget {
                   content: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Text("Desea reportar esta mascota como desaparecida?"),
+                      Text("Desea cancelar el reporte de desaparicion?"),
                     ],
                   ),
                   actions: [
@@ -90,7 +90,7 @@ class _btn_desarparicion extends StatelessWidget {
                         child: Text('Cancelar')),
                     TextButton(
                         onPressed: () {
-                          Navigator.pushNamed(context, 'pet1Found');
+                          Navigator.pushNamed(context, 'pet1');
                         },
                         child: Text(
                           'Confirmar',
@@ -99,6 +99,7 @@ class _btn_desarparicion extends StatelessWidget {
                   ],
                 );
               });
+          // Navigator.pushNamed(context, 'home');
         });
   }
 }

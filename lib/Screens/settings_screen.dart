@@ -34,12 +34,12 @@ class SettingsScreen extends StatelessWidget {
                 children: [
                   ListTile(
                     title: Text("Nombre"),
-                    subtitle: Text('Kelvin Pardo'),
+                    subtitle: Text('Eddy Ruiz'),
                     trailing: Icon(Icons.edit),
                   ),
                   ListTile(
                     title: Text("E-mail"),
-                    subtitle: Text('jrpardo92@gmail.com'),
+                    subtitle: Text('eddyr@gmail.com'),
                     trailing: Icon(Icons.edit),
                   ),
                   ListTile(
@@ -49,7 +49,7 @@ class SettingsScreen extends StatelessWidget {
                   ),
                   ListTile(
                     title: Text("Telefono"),
-                    subtitle: Text('0988222445'),
+                    subtitle: Text('099999999'),
                     trailing: Icon(Icons.edit),
                   ),
                   ListTile(

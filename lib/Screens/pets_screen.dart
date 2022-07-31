@@ -25,7 +25,10 @@ class PetsScreen extends StatelessWidget {
             _card1(),
             SizedBox(height: 20),
             _card2(),
-            SizedBox(height: 170),
+            SizedBox(height: 70),
+            SizedBox(
+              height: 80,
+            ),
             _btnAgregarMascota()
           ],
         ));
@@ -53,7 +56,7 @@ class _btnAgregarMascota extends StatelessWidget {
           ),
         ),
         onPressed: () {
-          Navigator.pushNamed(context, 'petSearchInfo');
+          Navigator.pushNamed(context, 'petRegister');
         });
   }
 }
@@ -72,15 +75,15 @@ class _card1 extends StatelessWidget {
       child: Card(
         elevation: 7,
         child: SizedBox(
-          height: 180,
+          height: 200,
           width: 160,
           child: Column(
             children: [
               const Image(
-                  height: 120,
+                  height: 140,
                   width: 350,
                   image: AssetImage('assets/images/max.jpg'),
-                  fit: BoxFit.cover),
+                  fit: BoxFit.fill),
               const Padding(
                 padding: EdgeInsets.all(8.0),
                 child: Text(

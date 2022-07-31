@@ -34,13 +34,29 @@ class LoginScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 50),
-            Text(
-              'Crear una nueva cuenta',
-              style: TextStyle(color: AppTheme.colorSecundary),
-            )
+            _crearCuenta()
           ],
         ),
       )),
+    );
+  }
+}
+
+class _crearCuenta extends StatelessWidget {
+  const _crearCuenta({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        Navigator.pushNamed(context, 'userRegister');
+      },
+      child: Text(
+        'Crear una nueva cuenta',
+        style: TextStyle(color: AppTheme.colorSecundary),
+      ),
     );
   }
 }

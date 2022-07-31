@@ -32,13 +32,14 @@ class HomeScreen extends StatelessWidget {
           const SizedBox(height: 30),
           const _MascotasTItle(),
           Row(
+            // TODO: borrrar
+            mainAxisAlignment: MainAxisAlignment.center,
             children: const [
               _cardpet1(),
               SizedBox(width: 10),
               _cardpet2(),
             ],
           ),
-          const SizedBox(height: 30),
           const _recomendartionsCard(),
         ],
       ),
@@ -261,26 +262,31 @@ class _MascotasTItle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        const Text(
-          'Mascotas principales',
-          style: TextStyle(fontSize: 17, fontWeight: FontWeight.w300),
-          textAlign: TextAlign.start,
-        ),
-        GestureDetector(
-          onTap: () {
-            Navigator.pushNamed(context, 'pets');
-          },
-          child: const Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Text(
-              'Ver todos',
-            ),
+    return GestureDetector(
+      onTap: () {
+        Navigator.pushNamed(context, 'pet1');
+      },
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          const Text(
+            'Mascotas principales',
+            style: TextStyle(fontSize: 17, fontWeight: FontWeight.w300),
+            textAlign: TextAlign.start,
           ),
-        )
-      ],
+          GestureDetector(
+            onTap: () {
+              Navigator.pushNamed(context, 'pets');
+            },
+            child: const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Text(
+                'Ver todos',
+              ),
+            ),
+          )
+        ],
+      ),
     );
   }
 }
@@ -298,7 +304,39 @@ class _cardSearch extends StatelessWidget {
         padding: const EdgeInsets.all(20),
         child: Column(
           children: [
-            const Text('No hay ninguna alerta de desaparicion'),
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, 'petSearchInfo');
+              },
+              child: Row(
+                children: [
+                  Image(
+                    image: AssetImage('assets/images/max.jpg'),
+                    height: 80,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                      vertical: 8.0,
+                      horizontal: 50,
+                    ),
+                    child: Column(
+                      children: [
+                        Text(
+                          'MAX',
+                          style: TextStyle(
+                            color: Colors.amber[700],
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20,
+                          ),
+                        ),
+                        Text("Golden"),
+                        Text('2 años'),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
             const SizedBox(height: 10),
             MaterialButton(
                 shape: RoundedRectangleBorder(
@@ -334,7 +372,7 @@ class _titleWelcome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Text(
-      'Hola, Kelvin.',
+      'Hola, Eddy.',
       style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
       textAlign: TextAlign.start,
     );

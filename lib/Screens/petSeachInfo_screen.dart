@@ -24,6 +24,15 @@ class PetSearchInfoScreen extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                      vertical: 8.0, horizontal: 110),
+                  child: Text(
+                    'DESAPARECIDO',
+                    style: TextStyle(
+                        color: Colors.red[700], fontWeight: FontWeight.bold),
+                  ),
+                ),
                 Text(
                   'ID:',
                   style: TextStyle(

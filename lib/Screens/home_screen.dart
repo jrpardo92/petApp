@@ -147,43 +147,47 @@ class _cardpet2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Card(
-          elevation: 7,
-          child: SizedBox(
-            height: 180,
-            width: 160,
-            child: Column(
-              children: [
-                const Image(
-                  image: AssetImage('assets/images/samoyedo.jpg'),
-                  fit: BoxFit.cover,
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
-                      Text(
-                        'MAX',
-                        style: TextStyle(fontWeight: FontWeight.w600),
-                      ),
-                      Text(
-                        '2 años',
-                        style: TextStyle(fontSize: 12),
-                      )
-                    ],
+        GestureDetector(
+          onTap: (() => Navigator.pushNamed(context, 'pet2')),
+          child: Card(
+            elevation: 7,
+            child: SizedBox(
+              height: 180,
+              width: 160,
+              child: Column(
+                children: [
+                  const Image(
+                    image: AssetImage('assets/images/samoyedo.jpg'),
+                    fit: BoxFit.cover,
                   ),
-                ),
-                Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 8.0, vertical: 5),
-                  child: Text(
-                    'Samoyedo',
-                    style: TextStyle(
-                        color: Colors.amber[700], fontWeight: FontWeight.w600),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: const [
+                        Text(
+                          'TONY',
+                          style: TextStyle(fontWeight: FontWeight.w600),
+                        ),
+                        Text(
+                          '1 año',
+                          style: TextStyle(fontSize: 12),
+                        )
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 8.0, vertical: 5),
+                    child: Text(
+                      'Samoyedo',
+                      style: TextStyle(
+                          color: Colors.amber[700],
+                          fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         )
@@ -199,49 +203,53 @@ class _cardpet1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Card(
-          elevation: 7,
-          child: SizedBox(
-            height: 180,
-            width: 160,
-            child: Column(
-              children: [
-                const Image(
-                    height: 120,
-                    image: AssetImage('assets/images/max.jpg'),
-                    fit: BoxFit.cover),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
-                      Text(
-                        'MAX',
-                        style: TextStyle(fontWeight: FontWeight.w600),
-                      ),
-                      Text(
-                        '2 años',
-                        style: TextStyle(fontSize: 12),
-                      )
-                    ],
+    return GestureDetector(
+      onTap: (() => Navigator.pushNamed(context, 'pet1')),
+      child: Row(
+        children: [
+          Card(
+            elevation: 7,
+            child: SizedBox(
+              height: 180,
+              width: 160,
+              child: Column(
+                children: [
+                  const Image(
+                      height: 120,
+                      image: AssetImage('assets/images/max.jpg'),
+                      fit: BoxFit.cover),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: const [
+                        Text(
+                          'MAX',
+                          style: TextStyle(fontWeight: FontWeight.w600),
+                        ),
+                        Text(
+                          '2 años',
+                          style: TextStyle(fontSize: 12),
+                        )
+                      ],
+                    ),
                   ),
-                ),
-                Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 8.0, vertical: 5),
-                  child: Text(
-                    'Golden Retriever',
-                    style: TextStyle(
-                        color: Colors.amber[700], fontWeight: FontWeight.w600),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 8.0, vertical: 5),
+                    child: Text(
+                      'Golden Retriever',
+                      style: TextStyle(
+                          color: Colors.amber[700],
+                          fontWeight: FontWeight.w600),
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-        )
-      ],
+          )
+        ],
+      ),
     );
   }
 }

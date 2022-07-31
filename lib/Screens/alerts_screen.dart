@@ -5,9 +5,18 @@ class AlertsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Alerts'),
+        actions: const [
+          Padding(
+            padding: EdgeInsets.only(right: 30.0),
+            child: Icon(Icons.pets),
+          )
+        ],
+      ),
       body: Center(
-        child: Text('AlertsScreen'),
+        child: Text('No hay alertas activas'),
       ),
     );
   }

@@ -20,5 +20,8 @@ class AppRouter {
     'settings': (context) => const SettingsScreen(),
     'userRegister': (context) => const UserRegisterScreen(),
     'btn_navigation': (context) => const Btn_Navigation_Screen(),
+    'pet1': (context) => const Pet1Screen(),
+    'pet2': (context) => const Pet2Screen(),
+    'pet3': (context) => const Pet3Screen(),
   };
 }
